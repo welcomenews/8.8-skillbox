@@ -53,6 +53,11 @@ $ sudo apt install nmap -y
 ---------------------------------------------------------------------
 
 
+https://habr.com/ru/company/solarsecurity/blog/497864/   часть 1
+
+https://habr.com/ru/company/solarsecurity/blog/499860/   часть 2
+
+https://habr.com/ru/company/solarsecurity/blog/499866/   часть 3
 
 
 
