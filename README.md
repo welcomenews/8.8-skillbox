@@ -9,12 +9,14 @@ $ sudo apt install postgresql postgresql-contrib -y
 https://www.sonarqube.org/downloads/
 
 #### Настраивае Postgress
+```
 $ sudo su postgres
 $ createuser sonar
 $ psql
 postgres=# ALTER user sonar WITH ENCRYPTED password 'sonar';
 postgres=# create database sonarqube owner sonar;
 postgres=# exit
+```
 
 #### Запуск Sonarqube
 $ ~/sonarqube/sonarqube-9.6.0.59041/bin/linux-x86-64$ ./sonar.sh start
