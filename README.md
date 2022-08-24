@@ -35,7 +35,7 @@ https://docs.sonarqube.org/latest/setup/install-server/
 $ sudo apt install bandit
 
 #### Клонируем репу и в ней запускаем
-### $ bandit -r .
+#### $ bandit -r .
 
 --------------------------------------------------------------------
 
