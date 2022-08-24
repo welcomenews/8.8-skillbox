@@ -35,21 +35,21 @@ https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 $ sudo apt install bandit
 
 #### Клонируем репу и в ней запускаем
-$ bandit -r .
+### $ bandit -r .
 
 --------------------------------------------------------------------
 
 #### Cppcheck - это инструмент статического анализа исходного кода на языке Си и Си++
-$ sudo apt install cppcheck -y
+#### $ sudo apt install cppcheck -y
 
 #### Клонируем репу и в ней запускаем
-cppcheck .
+#### cppcheck .
 --------------------------------------------------------------------
 
 #### Nmap сканер портов
-$ sudo apt install nmap -y
+#### $ sudo apt install nmap -y
 
-$ nmap -A localhost
+#### $ nmap -A localhost
 ---------------------------------------------------------------------
 
 
