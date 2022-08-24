@@ -27,8 +27,8 @@ $ ~/sonarqube/sonarqube-9.6.0.59041/bin/linux-x86-64$ ./sonar.sh start
 #### Оф.станица доки 
 https://docs.sonarqube.org/latest/setup/install-server/
 
-#### Скачиваем сканер 
-https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+#### Скачиваем сканер
+#### https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 -------------------------------------------------------------------
 
 #### Bandit может просканировать код на языке Python
