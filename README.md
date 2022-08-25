@@ -36,7 +36,8 @@ https://docs.sonarqube.org/latest/setup/install-server/
 $ sudo apt install bandit
 
 #### Клонируем репу и в ней запускаем
-#### $ bandit -r .
+
+$ bandit -r .
 
 --------------------------------------------------------------------
 <ins>`Cppcheck`</ins> это инструмент статического анализа исходного кода на языке Си и Си++
@@ -44,13 +45,16 @@ $ sudo apt install bandit
 $ sudo apt install cppcheck -y
 
 #### Клонируем репу и в ней запускаем
-#### $ cppcheck .
+
+$ cppcheck .
+
 --------------------------------------------------------------------
 <ins>`Nmap`</ins> сканер портов
 
 $ sudo apt install nmap -y
 
-#### $ nmap -A localhost
+$ nmap -A localhost
+
 ---------------------------------------------------------------------
 
 
