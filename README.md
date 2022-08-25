@@ -9,7 +9,7 @@
 
 
 #### Для работы Sonarqube нужно устновить джаву 11 базу данных (например postgresql)
-<p style='color:red'>$ sudo apt install openjdk-11-jre-headless -y </p>
++ $ sudo apt install openjdk-11-jre-headless -y +
 
 $ sudo apt install postgresql postgresql-contrib -y
 
