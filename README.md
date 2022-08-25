@@ -29,6 +29,7 @@ https://docs.sonarqube.org/latest/setup/install-server/
 
 #### Скачиваем сканер
 #### https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+
 -------------------------------------------------------------------
 
 <ins>`Bandit`</ins> может просканировать код на языке Python
@@ -36,7 +37,6 @@ https://docs.sonarqube.org/latest/setup/install-server/
 $ sudo apt install bandit
 
 #### Клонируем репу и в ней запускаем
-
 $ bandit -r .
 
 --------------------------------------------------------------------
@@ -45,7 +45,6 @@ $ bandit -r .
 $ sudo apt install cppcheck -y
 
 #### Клонируем репу и в ней запускаем
-
 $ cppcheck .
 
 --------------------------------------------------------------------
@@ -66,6 +65,8 @@ $ echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.githu
 $ sudo apt-get update
 $ sudo apt-get install trivy
 ```
+#### Пулим образ и запускаем
+$ trivy image <имя образа>
 
 https://aquasecurity.github.io/trivy/v0.31.2/getting-started/installation/
 
