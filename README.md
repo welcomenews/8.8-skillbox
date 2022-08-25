@@ -4,7 +4,7 @@
 
 #### Sonarqube может просканировать код на всех известных яз.программирования и сделать оценку качества кода.
 
-<style>H4{color:Red;}</style>
+<span style="color: red;">text</span>
 
 
 
