@@ -1,0 +1,126 @@
+INFO: Scanner configuration file: /home/sergey/sonarqube/sonar-scanner-cli-4.7.0.2747-linux/sonar-scanner-4.7.0.2747-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: /home/sergey/TEMP/calcite/sonar-project.properties
+INFO: SonarScanner 4.7.0.2747
+INFO: Java 11.0.14.1 Eclipse Adoptium (64-bit)
+INFO: Linux 5.15.0-46-generic amd64
+INFO: User cache: /home/sergey/.sonar/cache
+INFO: Scanner configuration file: /home/sergey/sonarqube/sonar-scanner-cli-4.7.0.2747-linux/sonar-scanner-4.7.0.2747-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: /home/sergey/TEMP/calcite/sonar-project.properties
+INFO: Analyzing on SonarQube server 9.6.0.59041
+INFO: Default locale: "ru_RU", source code encoding: "UTF-8"
+INFO: Load global settings
+INFO: Load global settings (done) | time=166ms
+INFO: Server id: 147B411E-AYLPEx9FHJ7NEYlIWsJn
+INFO: User cache: /home/sergey/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=76ms
+INFO: Load/download plugins (done) | time=256ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=19ms
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=6ms
+INFO: Project key: calcite
+INFO: Base dir: /home/sergey/TEMP/calcite
+INFO: Working dir: /home/sergey/TEMP/calcite/.scannerwork
+INFO: Load project settings for component key: 'calcite'
+INFO: Load project settings for component key: 'calcite' (done) | time=33ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=112ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=2542ms
+INFO: Load analysis cache
+INFO: Load analysis cache (404) | time=16ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=30ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: **/*.java
+INFO: 456 files indexed
+INFO: 2246 files ignored because of inclusion/exclusion patterns
+INFO: Quality profile for css: Sonar way
+INFO: Quality profile for json: Sonar way
+INFO: Quality profile for kotlin: Sonar way
+INFO: Quality profile for ruby: Sonar way
+INFO: Quality profile for web: Sonar way
+INFO: Quality profile for xml: Sonar way
+INFO: Quality profile for yaml: Sonar way
+INFO: ------------- Run sensors on module apache/calcite
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=79ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=30ms
+INFO: Sensor Kotlin Sensor [kotlin]
+INFO: 12 source files to be analyzed
+INFO: 12/12 source files have been analyzed
+INFO: Sensor Kotlin Sensor [kotlin] (done) | time=4454ms
+INFO: Sensor KotlinSurefireSensor [kotlin]
+INFO: parsing [/home/sergey/TEMP/calcite/target/surefire-reports]
+INFO: Sensor KotlinSurefireSensor [kotlin] (done) | time=2ms
+INFO: Sensor IaC CloudFormation Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=482ms
+INFO: Sensor IaC Kubernetes Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC Kubernetes Sensor [iac] (done) | time=207ms
+INFO: Sensor JavaScript inside YAML analysis [javascript]
+INFO: Sensor JavaScript inside YAML analysis [javascript] (done) | time=3970ms
+INFO: Sensor CSS Metrics [javascript]
+INFO: Sensor CSS Metrics [javascript] (done) | time=330ms
+INFO: Sensor CSS Rules [javascript]
+INFO: Sensor CSS Rules [javascript] (done) | time=5ms
+INFO: Sensor Ruby Sensor [ruby]
+INFO: 2 source files to be analyzed
+INFO: 1/2 file analyzed, current file: site/_plugins/wrap_table.rb
+INFO: 2/2 source files have been analyzed
+INFO: Sensor Ruby Sensor [ruby] (done) | time=10232ms
+INFO: Sensor SimpleCov Sensor for Ruby coverage [ruby]
+INFO: Sensor SimpleCov Sensor for Ruby coverage [ruby] (done) | time=1ms
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Sensor C# Analysis Log [csharp] (done) | time=36ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=0ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=685ms
+INFO: Sensor XML Sensor [xml]
+INFO: 25 source files to be analyzed
+INFO: 25/25 source files have been analyzed
+INFO: Sensor XML Sensor [xml] (done) | time=4276ms
+INFO: Sensor Text Sensor [text]
+INFO: 141 source files to be analyzed
+INFO: 141/141 source files have been analyzed
+INFO: Sensor Text Sensor [text] (done) | time=356ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=1ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=43ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=1ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Analysis Warnings import [csharp]
+INFO: Sensor Analysis Warnings import [csharp] (done) | time=2ms
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=49ms
+INFO: SCM Publisher is disabled
+INFO: CPD Executor 10 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 33 files
+INFO: CPD Executor CPD calculation finished (done) | time=68ms
+INFO: Analysis report generated in 288ms, dir size=2.0 MB
+INFO: Analysis report compressed in 399ms, zip size=430.8 kB
+INFO: Analysis report uploaded in 145ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: http://127.0.0.1:9000/dashboard?id=calcite
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://127.0.0.1:9000/api/ce/task?id=AYLPwPTDHJ7NEYlIW13c
+INFO: Analysis total time: 39.049 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 42.537s
+INFO: Final Memory: 43M/146M
+INFO: ------------------------------------------------------------------------

@@ -1,0 +1,267 @@
+Run started:2022-08-24 12:03:45.918007
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./clients/python/dd_client/__init__.py:92
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+91	    def set_return_format(self, f):
+92	        assert f == self.RETURN_PYTHON or f == self.RETURN_JSON or f == self.RETURN_NONE
+93	        self.__returntype = f
+
+--------------------------------------------------
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: ./demo/gpt2/run_gpt2.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+40	# generating text
+41	prompt = input("Enter beggining of sentence >>> ")
+42	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./demo/gpt2/run_gpt2.py:64
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+63	    
+64	    selector = random.uniform(0, total_probs)
+65	    total_probs = 0
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./demo/objdetect/sliding_objdetect.py:65
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+64	                             parameters_input,parameters_mllib,parameters_output,mltype)
+65	except: # most likely the service already exists
+66	    pass
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./demo/segmentation/segment.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+38	    ''' generate rgb using a list comprehension '''
+39	    r, g, b = [random.randint(0,255) for i in range(3)]
+40	    return [r, g, b]
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./demo/segmentation/segment.py:53
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+52	                             parameters_input,parameters_mllib,parameters_output,mltype)
+53	except: # most likely the service already exists
+54	    pass
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./demo/segmentation/segment_sliding.py:21
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+20	    ''' generate rgb using a list comprehension '''
+21	    r, g, b = [random.randint(0,255) for i in range(3)]
+22	    return [r, g, b]
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./demo/segmentation/segment_sliding.py:58
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+57	                             parameters_input,parameters_mllib,parameters_output,mltype)
+58	except: # most likely the service already exists
+59	    pass
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./demo/segmentation/view_annot.py:18
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+17	    ''' generate rgb using a list comprehension '''
+18	    r, g, b = [random.randint(0,255) for i in range(3)]
+19	    return [r, g, b]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./examples/caffe2/detectron/convert_pkl_to_pb.py:94
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+93	        elif type(v) in (list, tuple, numpy.ndarray):
+94	            assert len(v)
+95	            if type(v[0]) in (int, numpy.int32):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./examples/caffe2/detectron/convert_pkl_to_pb.py:124
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+123	    args = parser.parse_args()
+124	    assert not args.device == 'gpu' and args.use_nnpack
+125	    for key in {'cfg', 'wts', 'out_dir'}:
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:3
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+2	import os
+3	import subprocess
+4	import torch
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:28
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+27	        # Export model (not pretrained because we don't have permission for the cache)
+28	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "resnet50", "-o", _temp_dir])
+29	        model_file = os.path.join(_temp_dir, "resnet50.pt")
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:28
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+27	        # Export model (not pretrained because we don't have permission for the cache)
+28	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "resnet50", "-o", _temp_dir])
+29	        model_file = os.path.join(_temp_dir, "resnet50.pt")
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:33
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+32	        # Export to onnx
+33	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "resnet50", "-o", _temp_dir, "--to-onnx", "--weights", model_file])
+34	        onnx_file = os.path.join(_temp_dir, "resnet50.onnx")
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:33
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+32	        # Export to onnx
+33	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "resnet50", "-o", _temp_dir, "--to-onnx", "--weights", model_file])
+34	        onnx_file = os.path.join(_temp_dir, "resnet50.onnx")
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+38	        # Export model (not pretrained because we don't have permission for the cache)
+39	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "fasterrcnn_resnet50_fpn", "-o", _temp_dir])
+40	        model_file = os.path.join(_temp_dir, "fasterrcnn_resnet50_fpn-cls91.pt")
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+38	        # Export model (not pretrained because we don't have permission for the cache)
+39	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "fasterrcnn_resnet50_fpn", "-o", _temp_dir])
+40	        model_file = os.path.join(_temp_dir, "fasterrcnn_resnet50_fpn-cls91.pt")
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:60
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+59	        # Export to onnx
+60	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "fasterrcnn_resnet50_fpn", "-o", _temp_dir, "--to-onnx", "--weights", model_file])
+61	        onnx_file = os.path.join(_temp_dir, "fasterrcnn_resnet50_fpn-cls91.onnx")
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: ./tests/ut_python/ut_tools_torch.py:60
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+59	        # Export to onnx
+60	        subprocess.run(["python3", "trace_torchvision.py", "-vp", "fasterrcnn_resnet50_fpn", "-o", _temp_dir, "--to-onnx", "--weights", model_file])
+61	        onnx_file = os.path.join(_temp_dir, "fasterrcnn_resnet50_fpn-cls91.onnx")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./tools/torch/trace_torchvision.py:97
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+96	        if self.training:
+97	            assert ids is not None
+98	            assert bboxes is not None
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./tools/torch/trace_torchvision.py:98
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+97	            assert ids is not None
+98	            assert bboxes is not None
+99	            assert labels is not None
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./tools/torch/trace_torchvision.py:99
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+98	            assert bboxes is not None
+99	            assert labels is not None
+100	
+101	            l_targs : List[Dict[str, Tensor]] = []
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./tools/torch/trace_yolox.py:171
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+170	        if self.training:
+171	            assert ids is not None
+172	            assert bboxes is not None
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./tools/torch/trace_yolox.py:172
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+171	            assert ids is not None
+172	            assert bboxes is not None
+173	            assert labels is not None
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./tools/torch/trace_yolox.py:173
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+172	            assert bboxes is not None
+173	            assert labels is not None
+174	            
+175	            l_targs = []
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 3267
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 25.0
+		Medium: 0.0
+		High: 1.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 26.0
+Files skipped (11):
+	./datasets/imagenet/scripts/build_dataset.py (syntax error while parsing AST from file)
+	./datasets/imagenet/scripts/imagenet.py (syntax error while parsing AST from file)
+	./demo/gpt2/dd_client.py (No such file or directory)
+	./demo/imgsearch/dd_client.py (syntax error while parsing AST from file)
+	./demo/imgsearch/imgsearch.py (syntax error while parsing AST from file)
+	./demo/imgsearch/imgsearch_dd.py (syntax error while parsing AST from file)
+	./demo/objdetect/objdetect.py (syntax error while parsing AST from file)
+	./demo/objsearch/objsearch.py (syntax error while parsing AST from file)
+	./demo/objsearch/objsearch_dd.py (syntax error while parsing AST from file)
+	./demo/tsne/demo_tsne.py (syntax error while parsing AST from file)
+	./demo/tsne/demo_tsne_txt.py (syntax error while parsing AST from file)

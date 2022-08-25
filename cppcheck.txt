@@ -1,0 +1,38 @@
+deepdetect/src/backends/caffe2/caffe2inputimg.cc:542:33: error: Using object that points to local variable 'train_files' that may be invalid. [invalidContainer]
+        write_images_to_db(_db, test_files);
+                                ^
+deepdetect/src/backends/caffe2/caffe2inputimg.cc:539:35: note: Iterator to container is created here.
+            test_files.assign(it, train_files.end());
+                                  ^
+deepdetect/src/backends/caffe2/caffe2inputimg.cc:539:50: note: Added to container 'test_files'.
+            test_files.assign(it, train_files.end());
+                                                 ^
+deepdetect/src/backends/caffe2/caffe2inputimg.cc:540:13: note: After calling 'erase', iterators or references to the container's data may be invalid .
+            train_files.erase(it, train_files.end());
+            ^
+deepdetect/src/backends/caffe2/caffe2inputimg.cc:524:46: note: Variable created here.
+    std::vector<std::pair<std::string, int>> train_files, test_files;
+                                             ^
+deepdetect/src/backends/caffe2/caffe2inputimg.cc:542:33: note: Using object that points to local variable 'train_files' that may be invalid.
+        write_images_to_db(_db, test_files);
+                                ^
+deepdetect/src/commandlineapi.cc:75:25: error: Null pointer dereference [nullPointer]
+            predict(ad, 0, out);
+                        ^
+deepdetect/src/commandlineapi.cc:109:23: error: Null pointer dereference [nullPointer]
+            train(ad, 0, out);
+                      ^
+deepdetect/src/mlservice.h:481:15: error: Iterator 'hit' used after element has been erased. [eraseDereference]
+              _training_jobs.erase(hit);
+              ^
+deepdetect/src/mlservice.h:482:47: note: Iterator 'hit' used after element has been erased.
+              auto ohit = _training_out.find((*hit).first);
+                                              ^
+deepdetect/src/mlservice.h:481:15: note: Iterator 'hit' used after element has been erased.
+              _training_jobs.erase(hit);
+              ^
+deepdetect/src/graph/graph.h:33:1: error: Unmatched '{'. Configuration: ''. [syntaxError]
+{
+^
+nofile:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 configurations. Use --force to check all configurations. For more details, use --enable=information. [toomanyconfigs]
+
