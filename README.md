@@ -56,6 +56,20 @@ $ sudo apt install nmap -y
 $ nmap -A localhost
 
 ---------------------------------------------------------------------
+<ins>`Trivy`</ins> умеет сканировать как образ в репозитории, так и локальный образ, а также проводить сканирование на основании переданного .tar файла с Docker-образом
+
+```
+Debian/Ubuntu
+$ sudo apt-get install wget apt-transport-https gnupg lsb-release
+$ wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+$ echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+$ sudo apt-get update
+$ sudo apt-get install trivy
+```
+
+https://aquasecurity.github.io/trivy/v0.31.2/getting-started/installation/
+
+----------------------------------------------------------------------
 
 
 https://habr.com/ru/company/solarsecurity/blog/497864/   часть 1
