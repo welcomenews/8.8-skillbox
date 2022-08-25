@@ -6,6 +6,8 @@
 - Sonarqube 
 ``` может просканировать код на всех известных яз.программирования и сделать оценку качества кода.
 
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+
 
 #### Для работы Sonarqube нужно устновить джаву 11 базу данных (например postgresql)
 $ sudo apt install openjdk-11-jre-headless -y
