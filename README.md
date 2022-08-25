@@ -73,12 +73,6 @@ https://aquasecurity.github.io/trivy/v0.31.2/getting-started/installation/
 ----------------------------------------------------------------------
 
 
-https://habr.com/ru/company/solarsecurity/blog/497864/   часть 1
-
-https://habr.com/ru/company/solarsecurity/blog/499860/   часть 2
-
-https://habr.com/ru/company/solarsecurity/blog/499866/   часть 3
-
 
 
 
