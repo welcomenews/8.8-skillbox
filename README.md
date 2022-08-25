@@ -3,12 +3,12 @@
 -----------------------------------------------------------
 
 ```diff 
-- Sonarqube 
+Sonarqube 
 ``` может просканировать код на всех известных яз.программирования и сделать оценку качества кода.
 
 
 #### Для работы Sonarqube нужно устновить джаву 11 базу данных (например postgresql)
-+ $ sudo apt install openjdk-11-jre-headless -y +
+$ sudo apt install openjdk-11-jre-headless -y
 
 $ sudo apt install postgresql postgresql-contrib -y
 
