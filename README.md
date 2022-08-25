@@ -5,7 +5,7 @@
 #### Sonarqube может просканировать код на всех известных яз.программирования и сделать оценку качества кода.
 w
 
-<span style="color:red;">text</span>
+! Don't want to add the "!"!
 
 
 
