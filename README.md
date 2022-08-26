@@ -72,6 +72,18 @@ https://aquasecurity.github.io/trivy/v0.31.2/getting-started/installation/
 
 ----------------------------------------------------------------------
 
+<ins>`goreporter`</ins> может просканировать код на языке Go
+
+Установить go 
+
+после запустить
+$ go get -u github.com/360EntSecGroup-Skylar/goreporter
+
+Клонировать репу и запустить
+
+goreporter -p <путь к репе>
+
+
 
 
 
