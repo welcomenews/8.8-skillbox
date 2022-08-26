@@ -84,10 +84,38 @@ $ go get -u github.com/360EntSecGroup-Skylar/goreporter
 
 $ goreporter -p <путь к репе>
 
+-----------------------------------------------------------------------
 
+<ins>`Semgrep`</ins> может просканировать код на языках C#, Go, Java, JavaScript, JSX, JSON, PHP, Python, Ruby, Scala, TypeScript, TSX 
+Интегрируется с GitHub, GitLab, CircleCI
 
+#### To install Semgrep use Homebrew or pip, or run without installation via Docker:
+```
+# For macOS
+$ brew install semgrep
 
+# For Ubuntu/WSL/Linux/macOS
+$ python3 -m pip install semgrep
 
+# To try Semgrep without installation run via Docker
+$ docker run --rm -v "${PWD}:/src" returntocorp/semgrep
+```
+#### RUN
+```
+# Check for Python == where the left and right hand sides are the same (often a bug)
+
+$ semgrep -e '$X == $X' --lang=py path/to/src
+
+# Fetch rules automatically by setting the `--config auto` flag.
+# This will fetch rules relevant to your project from Semgrep Registry.
+# The name of your project will be sent to Semgrep Registry as an identifier
+# to make selecting relevant rules fast next time;
+# source code will not be uploaded.
+
+$ semgrep --config auto
+```
+
+-------------------------------------------------------------------------------
 
 
 
